@@ -39,18 +39,6 @@ export default function RoundPage() {
                     </div>
                 ))}
             </Carousel>
-            {/* {roundDetails.applications.map((project) => (
-                <Card key={project.id} className="mb-4">
-                    <CardHeader>{project.name}</CardHeader>
-                    <CardContent>
-                        <CardDescription>{project.sdg}</CardDescription>
-                        <CardDescription>{project.description}</CardDescription>
-                        {project.image && (
-                            <img src={project.image} alt={project.name} style={{ maxWidth: "100%", height: "auto" }} />
-                        )}
-                    </CardContent>
-                </Card>
-            ))} */}
         </div>
     );
     // return (
