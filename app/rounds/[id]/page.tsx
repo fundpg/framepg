@@ -25,6 +25,7 @@ export default function RoundPage(){
                     {roundDetails.applications.map((project) => (
                         <div key={project.id} className="p-2 border-b border-gray-200">
                             <p className="font-medium">{project.id}</p>
+                            <p className="font-medium">{project.name}</p>
                         </div>
                     ))}
                 </div>
