@@ -18,9 +18,6 @@ import { groupBy, uniq } from "lodash-es";
 import { CartProject, ProgressStatus } from "../../../features/api/types";
 import { useCartStorage } from "../../../lib/store";
 
-
-
-
 import { getConfig } from '../../../lib/config';
 
 import {
@@ -30,8 +27,6 @@ import {
   signPermitDai,
 } from "../../../features/api/voting";
 import { MRC_CONTRACTS } from "../../../lib/addresses/mrc";
-
-
 
 const MRC_ABI = [
   {
@@ -147,23 +142,23 @@ app.transaction('/mint', (c) => {
 
   const mrcAddress = MRC_CONTRACTS[chainID];
 
-  const poolIds = Object.keys(groupedEncodedVotes).flatMap((key) => {
-    const count = groupedEncodedVotes[key].length;
-    return new Array(count).fill(key);
-  });
+  // const poolIds = Object.keys(groupedEncodedVotes).flatMap((key) => {
+  //   const count = groupedEncodedVotes[key].length;
+  //   return new Array(count).fill(key).map(BigInt);
+  // })
+  const poolIds = 534352;
+
   const data = Object.values(groupedEncodedVotes).flat();
 
   return c.contract({
       abi: MRC_ABI,
       chainId: `eip155:${chainID}`,
       functionName: 'allocate',
-      args: [ poolIds, inputText, data],
+      args: [ BigInt(poolIds), BigInt(inputText || '0'), data],
       to: mrcAddress,
       value: parseEther(inputText || '')
   })
 })
-
-
 
 
 export const GET = handle(app)
