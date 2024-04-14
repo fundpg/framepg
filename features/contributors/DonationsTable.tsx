@@ -1,0 +1,145 @@
+import {
+  ChevronRightIcon,
+  InformationCircleIcon,
+} from "@heroicons/react/24/solid";
+import ReactTooltip from "react-tooltip";
+import { CHAINS } from "../api/utils";
+import { Link } from "react-router-dom";
+import { TransactionButton } from "./TransactionButton";
+import { ChainId, VotingToken } from "common";
+import { formatUnits } from "viem";
+import { Contribution } from "data-layer";
+
+export function DonationsTable(props: {
+  contributions: Contribution[];
+  tokens: Record<string, VotingToken>;
+  activeRound: boolean;
+}) {
+  return (
+    <>
+      <table
+        className="border-collapse w-full"
+        data-testid="donation-history-table"
+      >
+        <tbody>
+          <tr className="text-left text-lg">
+            <th className="py-4 w-1/3 lg:w-1/2 font-medium">Project</th>
+            <th className="flex flex-row py-4 w-1/3 lg:w-1/4 font-medium">
+              <div className="py-4">Donation</div>
+              <div className="py-4">
+                <InformationCircleIcon
+                  data-tip
+                  data-background-color="#0E0333"
+                  data-for="donation-tooltip"
+                  className="inline h-4 w-4 ml-2 mr-3"
+                  data-testid={"donation-tooltip"}
+                />
+                <ReactTooltip
+                  id="donation-tooltip"
+                  place="bottom"
+                  type="dark"
+                  effect="solid"
+                >
+                  <p className="text-xs">
+                    The displayed amount in USD reflects <br />
+                    the value at the time of your donation.
+                  </p>
+                </ReactTooltip>
+              </div>
+            </th>
+            <th className="py-4 text-right w-1/3 lg:w-1/4 font-medium">
+              Transaction Information
+            </th>
+          </tr>
+          {props.contributions.length > 0 &&
+            props.contributions
+              .flat()
+              .sort(
+                (a, b) =>
+                  (Number(b.timestamp) || Number.MAX_SAFE_INTEGER) -
+                  (Number(a.timestamp) || Number.MAX_SAFE_INTEGER)
+              )
+
+              .map((contribution) => {
+                const tokenId =
+                  contribution.tokenAddress.toLowerCase() +
+                  "-" +
+                  contribution.chainId;
+                const token = props.tokens[tokenId];
+
+                let formattedAmount = "N/A";
+
+                if (token) {
+                  formattedAmount = `${formatUnits(
+                    BigInt(contribution.amount),
+                    token.decimal
+                  )} ${token.name}`;
+                }
+
+                return (
+                  <tr key={contribution.id}>
+                    <td className="border-b py-4 pr-2 lg:pr-16 w-1/3 lg:w-1/2">
+                      <div className="flex items-center">
+                        <div className="flex flex-col sm:flex-row">
+                          <div className="flex items-center">
+                            <img
+                              className="w-4 h-4 mr-2"
+                              src={
+                                CHAINS[contribution.chainId as ChainId]?.logo
+                              }
+                              alt="Round Chain Logo"
+                            />
+                            <Link
+                              className={`underline inline-block lg:pr-2 lg:max-w-[200px] max-w-[75px] 2xl:max-w-fit truncate`}
+                              title={contribution.round.roundMetadata.name}
+                              to={`/round/${
+                                contribution.chainId
+                              }/${contribution.roundId.toLowerCase()}`}
+                              target="_blank"
+                            >
+                              {contribution.round.roundMetadata.name}
+                            </Link>
+                            <ChevronRightIcon className="h-4 inline lg:mx-2" />
+                          </div>
+                          <Link
+                            className={`underline inline-block lg:pr-2 lg:max-w-[300px] max-w-[75px] 2xl:max-w-fit truncate`}
+                            title={contribution.application.project.name}
+                            to={`/round/${contribution.chainId}/${contribution.roundId.toString().toLowerCase()}/${contribution.applicationId}`}
+                            target="_blank"
+                          >
+                            {contribution.application.project.name}
+                          </Link>
+                        </div>
+                      </div>
+                      {/* Todo: display contribution timestamp */}
+                      {/* <div className="text-sm text-gray-500">4 mins ago</div> */}
+                    </td>
+                    <td className="border-b py-4 truncate lg:pr-16 w-1/3 lg:w-1/4">
+                      {formattedAmount}
+                      <div className="text-md text-gray-500">
+                        ${contribution.amountInUsd.toFixed(2)}
+                      </div>
+                    </td>
+                    <td className="border-b py-4 lg:pr-12 w-1/3 lg:w-1/4">
+                      <div className="flex justify-end">
+                        <TransactionButton
+                          chainId={contribution.chainId}
+                          txHash={contribution.transactionHash}
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+        </tbody>
+      </table>
+      {props.contributions.length === 0 && (
+        <div className="text-md mt-2 mb-12">
+          {props.activeRound
+            ? "Donations made during active rounds will appear here."
+            : "Donations made during past rounds will appear here."}
+        </div>
+      )}
+    </>
+  );
+}
