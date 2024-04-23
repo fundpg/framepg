@@ -2,201 +2,490 @@ import { type GitcoinRound } from "./types";
 
 export const rounds: GitcoinRound[] = [
     {
-        "id": "0xccbde000bd8006bab437f2efbe6ecb0a3eb334af",
-        "chainId": 8453,
+      "id": "25",
+      "chainId": 42161,
+      "tags": [
+        "allo-v2",
+        "grants-stack"
+      ],
+      "roundMetadata": {
+        "name": "dApps & Apps ",
+        "support": {
+          "info": "https://t.me/+W9y5_KplLX4xYjcx",
+          "type": "Telegram Group Invite Link"
+        },
+        "roundType": "public",
+        "eligibility": {
+          "description": "To hasten the growth and widespread use of dApps & Apps, there's an initiative to support those offering innovative utilities or services within the ecosystem. The focus is on supporting two main areas:\n\n1. User-Centric dApps & Apps: Priority is given to applications that significantly enhance Web3 accessibility and usability, making it easier and more intuitive for users to navigate and benefit from the decentralized web.\n\n2. Contributions to User Experience and Interface Design, Financial Inclusion, Education, and Social Impact: dApps and Apps dedicated to advancing financial inclusion, providing educational opportunities, and creating positive social impact are strongly encouraged to apply.\n",
+          "requirements": [
+            {
+              "requirement": "User-Centric Design and Functionality: Projects should prioritize the development of applications that offer exceptional user experience, accessibility, and practical utility in the Web3 space. The goal is to make tech easy and beneficial for everyday users, bridging the gap between complex innovations and their practical application.\n"
+            },
+            {
+              "requirement": "Innovation in Application Use Cases: Projects should explore and implement new and novel use cases for applications within the Web3 sphere. We're interested in projects that push the boundaries of what's possible, showcasing the versatility and expansive potential of Web3 technologies to address a wide range of needs and opportunities.\n"
+            }
+          ]
+        },
+        "feesAddress": "",
+        "feesPercentage": 0,
+        "programContractAddress": "0xeaf418299b6aacff422d3ad8f561956116dfb3b5cca09ab15ffa56ed9dbb7330",
+        "quadraticFundingConfig": {
+          "matchingCap": true,
+          "sybilDefense": false,
+          "minDonationThreshold": true,
+          "matchingFundsAvailable": 300000,
+        }
+      },
+      "roundMetadataCid": "bafkreihfl3dqpsmrnbrhuxufflbjwozrln3nbdxe7fidfwnyilg4y6kkzu",
+      "applicationsStartTime": "2024-04-02T12:00:00+00:00",
+      "applicationsEndTime": "2024-04-27T23:59:00+00:00",
+      "donationsStartTime": "2024-04-23T12:00:00+00:00",
+      "donationsEndTime": "2024-05-07T23:59:00+00:00",
+      "matchAmountInUsd": 299599.56,
+      "matchAmount": "300000000000",
+      "matchTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "strategyId": "0x9fa6890423649187b1f0e8bf4265f0305ce99523c3d11aa36b35a54617bb0ec0",
+      "strategyName": "allov2.DonationVotingMerkleDistributionDirectTransferStrategy",
+      "strategyAddress": "0xe03a19f4921d69cddd37f54dfe814dc66aa92100",
+      "applications": [
+        {
+          "id": "0",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "101",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "103",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "104",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "105",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "106",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "107",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "chainId": 42161,
+      "tags": [
+        "allo-v2",
+        "grants-stack"
+      ],
+      "roundMetadata": {
+        "name": "Web3 Infrastructure",
+        "support": {
+          "info": "https://t.me/+W9y5_KplLX4xYjcx",
+          "type": "Telegram Group Invite Link"
+        },
+        "roundType": "public",
+        "eligibility": {
+          "description": "This round aims to strengthen the Ethereum ecosystem's foundational infrastructure by supporting projects crucial for its development, scalability, and security. \n\nWe seek to fund initiatives that focus on core client teams and development, staking infrastructure and diversity, decentralized identity and cross-layer solutions, security and scalability innovations, wallet security and privacy technologies, and standardization and future-proofing efforts. \n\nSuccessful projects will demonstrate a significant contribution to the Ethereum network's infrastructure, addressing both foundational needs and innovative solutions to current challenges, while engaging in pioneering development that promises to elevate the ecosystem, particularly in areas of privacy, interoperability, and user experience.\n",
+          "requirements": [
+            {
+              "requirement": "Infrastructure Impact: Projects must demonstrate a significant contribution to the Ethereum network’s infrastructure, addressing both foundational needs and innovative solutions to current challenges.\n"
+            },
+            {
+              "requirement": "Engagement in Pioneering Development: A focus on pioneering technologies or approaches that promise to elevate the Ethereum ecosystem, particularly in enhancing privacy, interoperability, and user experience.\n"
+            }
+          ]
+        },
+        "feesAddress": "",
+        "feesPercentage": 0,
+        "programContractAddress": "0xeaf418299b6aacff422d3ad8f561956116dfb3b5cca09ab15ffa56ed9dbb7330",
+        "quadraticFundingConfig": {
+          "matchingCap": true,
+          "sybilDefense": false,
+          "minDonationThreshold": true,
+          "matchingFundsAvailable": 300000,
+        }
+      },
+      "roundMetadataCid": "bafkreiefzektaeujufnfftxlc72k6i526qcqhyhyy56oa426mrvjhjk3ji",
+      "applicationsStartTime": "2024-04-02T12:00:00+00:00",
+      "applicationsEndTime": "2024-04-27T23:59:00+00:00",
+      "donationsStartTime": "2024-04-23T12:00:00+00:00",
+      "donationsEndTime": "2024-05-07T23:59:00+00:00",
+      "matchAmountInUsd": 299288.38,
+      "matchAmount": "300000000000",
+      "matchTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "strategyId": "0x9fa6890423649187b1f0e8bf4265f0305ce99523c3d11aa36b35a54617bb0ec0",
+      "strategyName": "allov2.DonationVotingMerkleDistributionDirectTransferStrategy",
+      "strategyAddress": "0xda3b55a9bcf58bb2d9f673836beab3ae47ca9184",
+      "applications": [
+        {
+          "id": "0",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "101",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "103",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "104",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "105",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "106",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "107",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "chainId": 42161,
+      "tags": [
+        "allo-v2",
+        "grants-stack"
+      ],
+      "roundMetadata": {
+        "name": "Developer Tooling and Libraries",
+        "support": {
+          "info": "https://t.me/+W9y5_KplLX4xYjcx",
+          "type": "Telegram Group Invite Link"
+        },
+        "roundType": "public",
+        "eligibility": {
+          "description": "This round focuses on improving developer efficiency in the open-source software (OSS) and Web3 ecosystems by funding projects that provide essential tooling and libraries. We seek to support the creation and enhancement of development environments, frameworks, testing tools, and libraries that enable secure, efficient smart contract development. Successful projects will reduce development barriers, enhance efficiency, and demonstrate strong community support and usage.",
+          "requirements": [
+            {
+              "requirement": "Significant reduction of development barriers or enhancement of project efficiency.\n"
+            },
+            {
+              "requirement": "Demonstrated support and usage within the developer community.\n"
+            }
+          ]
+        },
+        "feesAddress": "",
+        "feesPercentage": 0,
+        "programContractAddress": "0xeaf418299b6aacff422d3ad8f561956116dfb3b5cca09ab15ffa56ed9dbb7330",
+        "quadraticFundingConfig": {
+          "matchingCap": true,
+          "sybilDefense": false,
+          "minDonationThreshold": true,
+          "matchingFundsAvailable": 300000,
+        }
+      },
+      "roundMetadataCid": "bafkreie4jqmamokn7rlbbtzglhg6724lkb72ff6bmpgzzrurn7defadpmu",
+      "applicationsStartTime": "2024-04-02T12:00:00+00:00",
+      "applicationsEndTime": "2024-04-27T23:59:00+00:00",
+      "donationsStartTime": "2024-04-23T23:59:00+00:00",
+      "donationsEndTime": "2024-05-07T23:59:00+00:00",
+      "matchAmountInUsd": 299288.38,
+      "matchAmount": "300000000000",
+      "matchTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "strategyId": "0x9fa6890423649187b1f0e8bf4265f0305ce99523c3d11aa36b35a54617bb0ec0",
+      "strategyName": "allov2.DonationVotingMerkleDistributionDirectTransferStrategy",
+      "strategyAddress": "0x1b48bb09930676d99dda36c1ad27ff0a5a5f3911",
+      "applications": [
+        {
+          "id": "0",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "101",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "103",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "104",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "105",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "106",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        },
+        {
+          "id": "107",
+          "name": "",
+          "description": "",
+          "sdg": "",
+          "walletAddress": "",
+          "teamSize": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+        "id": "23",
+        "chainId": 42161,
         "tags": [
-            "allo-v1"
+          "allo-v2",
+          "grants-stack"
         ],
         "roundMetadata": {
-            "name": "UN Sustainability Goals",
-            "support": {
-                "info": "quantumstake@quant.com",
-                "type": "Email"
-            },
-            "roundType": "public",
-            "eligibility": {
-                "description": "Roadmap:\n\nLaunch Phase\n\nDevelopment and audit of the staking smart contract.\nRelease of our native cryptocurrency for use within the staking system.\nOnboarding of initial testers and gathering their feedback.\nExpansion Phase\n\nLaunch of a marketing campaign to attract a larger staker community.\nDevelopment of additional features to enhance the staking ecosystem.\nPartnerships with other projects to increase staking volumes.\nInnovation Phase\n\nImplementation of new technologies such as DeFi and NFTs to expand staking capabilities.\nLaunch of a developer program for third-party applications based on staking.\nIntegration with other blockchains and cryptocurrency projects.\nObjective:\n\nQuantumStake aims to create an innovative, efficient, and secure staking platform that meets the demands of the contemporary crypto landscape. We strive to provide users with the opportunity to stake using cutting-edge technologies and derive maximum benefits from participating in our ecosystem.\n\nThrough the QuantumStake Accelerator, we plan to secure funding to implement innovations, scale operations, and ensure the long-term success of our project. Join us in this exciting stage of development, where we collaboratively shape the future of staking in the cryptocurrency space.",
-                "requirements": [
-                    {
-                        "requirement": "Welcome"
-                    }
-                ]
-            },
-            "feesAddress": "",
-            "feesPercentage": 0,
-            "programContractAddress": "0xd6580df956dea082ac3f8b1b218b641b8813f8b9",
-            "quadraticFundingConfig": {
-                "matchingCap": false,
-                "sybilDefense": false,
-                "minDonationThreshold": false,
-                "matchingFundsAvailable": 5
-            }
+          "name": "Hackathon Alumni",
+          "support": {
+            "info": "https://t.me/+W9y5_KplLX4xYjcx",
+            "type": "Telegram Group Invite Link"
+          },
+          "roundType": "public",
+          "eligibility": {
+            "description": "To foster the growth and impact of open-source software (OSS) within the tech ecosystem, there's a growing need to support projects that have shown promising beginnings at recent hackathons. Recognizing this potential, the focus is on identifying and funding projects that align with several key target areas:\n\n1. Innovative Solutions or Prototypes: Priority will be given to projects that originated as innovative solutions or prototypes during hackathons. These projects should demonstrate a high potential for scalability, impact, and the ability to address complex challenges within the OSS ecosystem.\n\n2. Initiatives Addressing Clear Needs: The funding will also target initiatives addressing clear and identifiable needs within the OSS or broader tech ecosystem. This includes projects that offer new tools and improve end user experience.\n",
+            "requirements": [
+              {
+                "requirement": "Participated in a recognized hackathon within the last 18 months."
+              },
+              {
+                "requirement": "Evidence of development progress post-hackathon."
+              },
+              {
+                "requirement": "Must provide proof of participation in a hackathon in the last 18 months where the output aligns with Open-Source Principles and Project Activity criteria."
+              }
+            ]
+          },
+          "feesAddress": "",
+          "feesPercentage": 0,
+          "programContractAddress": "0xeaf418299b6aacff422d3ad8f561956116dfb3b5cca09ab15ffa56ed9dbb7330",
+          "quadraticFundingConfig": {
+            "matchingCap": true,
+            "sybilDefense": false,
+            "minDonationThreshold": true,
+            "matchingFundsAvailable": 100000,
+          }
         },
-        "roundMetadataCid": "bafkreiha3goo4vdijwn3niafwag74jmm5i7u6e3h6g3dwqho6of7n6h5du",
-        "applicationsStartTime": "2024-01-20T04:00:00+00:00",
-        "applicationsEndTime": "2024-01-21T00:00:00+00:00",
-        "donationsStartTime": "2024-01-20T23:59:50+00:00",
-        "donationsEndTime": "2024-06-20T00:00:00+00:00",
-        "matchAmountInUsd": 12433.197,
-        "matchAmount": "5000000000000000000",
-        "matchTokenAddress": "0x0000000000000000000000000000000000000000",
-        "strategyId": "",
-        "strategyName": "allov1.QF",
-        "strategyAddress": "0xa3e523f289684133a6cd4f10e3213d00041e25eb",
+        "roundMetadataCid": "bafkreihzxjexywp7q62wf5ccbcwem3mu3ydhbmck6nk7jungtqwff4ttgm",
+        "applicationsStartTime": "2024-04-02T12:00:00+00:00",
+        "applicationsEndTime": "2024-04-27T23:59:00+00:00",
+        "donationsStartTime": "2024-04-23T12:00:00+00:00",
+        "donationsEndTime": "2024-05-07T23:59:00+00:00",
+        "matchAmountInUsd": 99866.52,
+        "matchAmount": "100000000000",
+        "matchTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+        "strategyId": "0x9fa6890423649187b1f0e8bf4265f0305ce99523c3d11aa36b35a54617bb0ec0",
+        "strategyName": "allov2.DonationVotingMerkleDistributionDirectTransferStrategy",
+        "strategyAddress": "0xf50fa2dc5cbe583670323bc5acdeb02c447cd8b3",
         "applications": [
             {
-                "id": "0",
-                "name": "Crypto for Change",
-                "description": "A platform that leverages cryptocurrency donations to fund initiatives aimed at eradicating poverty, providing financial education and resources to the poorest communities worldwide, ensuring sustainable paths out of poverty.",
-                "sdg": "No Poverty",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA6",
-                "teamSize": "3",
-                "image": "https://i.imgur.com/ZRLuDiQ.png"
+              "id": "0",
+              "name": "",
+              "description": "",
+              "sdg": "",
+              "walletAddress": "",
+              "teamSize": "",
+              "image": ""
             },
             {
-                "id": "1",
-                "name": "AgriChain Initiative",
-                "description": "A project using blockchain to improve food security by enhancing supply chain transparency and efficiency in the agricultural sector, promoting sustainable agriculture practices, and ensuring food reaches the most vulnerable communities",
-                "sdg": "Zero Hunger",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA6",
-                "teamSize": "2",
-                "image": "https://i.imgur.com/xhzy1pD.png"
+              "id": "1",
+              "name": "",
+              "description": "",
+              "sdg": "",
+              "walletAddress": "",
+              "teamSize": "",
+              "image": ""
             },
             {
-                "id": "2",
-                "name": "Health Chain",
-                "description": "A decentralized platform for sharing health resources and information, facilitating global collaboration in medical research, and supporting health initiatives, especially in underserved areas to promote well-being for all ages.",
-                "sdg": "Good Health and Well-being",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA7",
-                "teamSize": "5",
-                "image": "https://i.imgur.com/Uiach4u.png"
+              "id": "101",
+              "name": "",
+              "description": "",
+              "sdg": "",
+              "walletAddress": "",
+              "teamSize": "",
+              "image": ""
             },
             {
-                "id": "3",
-                "name": "EduBlock",
-                "description": "A project focused on providing equitable access to quality education through an open-source platform that offers online courses, resources, and tools for learners worldwide, with a focus on lifelong learning opportunities.",
-                "sdg": "Quality Education",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA8",
-                "teamSize": "10",
-                "image": "https://i.imgur.com/H6859xo.png"
+              "id": "103",
+              "name": "",
+              "description": "",
+              "sdg": "",
+              "walletAddress": "",
+              "teamSize": "",
+              "image": ""
             },
             {
-                "id": "4",
-                "name": "SecHERity",
-                "description": "An initiative aimed at closing the gender gap in blockchain security auditor, offering educational courses, mentorship programs, and job placement for women and girls.",
-                "sdg": "Gender Equality",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA9",
-                "teamSize": "8",
-                "image": "https://i.imgur.com/8EC5Qfs.png"
+              "id": "104",
+              "name": "",
+              "description": "",
+              "sdg": "",
+              "walletAddress": "",
+              "teamSize": "",
+              "image": ""
             },
             {
-                "id": "5",
-                "name": "WaterChain",
-                "description": "A decentralized solution for managing water resources efficiently, funding clean water projects, and improving sanitation facilities through blockchain-based tracking and allocation of resources.",
-                "sdg": "Clean Water and Sanitation",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA10",
-                "teamSize": "4",
-                "image": "https://i.imgur.com/e0M5x8X.png"
+              "id": "105",
+              "name": "",
+              "description": "",
+              "sdg": "",
+              "walletAddress": "",
+              "teamSize": "",
+              "image": ""
             },
             {
-                "id": "6",
-                "name": "The Solar Foundation",
-                "description": "Accelerates access to decentralized clean energy for underserved communities, using blockchain to fund solar projects that reduce CO2e and increase climate resilience.",
-                "sdg": "Affordable and Clean Energy",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA11",
-                "teamSize": "3",
-                "image": "https://i.imgur.com/QK0WnQY.png"
+              "id": "106",
+              "name": "",
+              "description": "",
+              "sdg": "",
+              "walletAddress": "",
+              "teamSize": "",
+              "image": ""
             },
             {
-                "id": "7",
-                "name": "Web3 Workforce",
-                "description": "A platform that connects freelancers with blockchain-based projects, promoting full and productive employment by leveraging the gig economy within the web3 ecosystem for sustainable economic growth.",
-                "sdg": "Decent Work and Economic Growth",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA12",
-                "teamSize": "2",
-                "image": "https://i.imgur.com/H4vgifm.png"
-            },
-            {
-                "id": "8",
-                "name": "InnovateChain",
-                "description": "Supports the development of resilient infrastructure and fosters innovation by funding projects that aim to build sustainable and inclusive industrialization within the web3 space.",
-                "sdg": "Industry, Innovation, and Infrastructure",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA13",
-                "teamSize": "8",
-                "image": "https://i.imgur.com/YMUcsau.png"
-            },
-            {
-                "id": "9",
-                "name": "EqualDApp",
-                "description": "Focuses on using decentralized applications to reduce inequality, providing tools and platforms that ensure fair access to opportunities and resources for underserved populations worldwide.",
-                "sdg": "Reduced Inequalities",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA14",
-                "teamSize": "5",
-                "image": "https://i.imgur.com/4XSFN3S.png"
-            },
-            {
-                "id": "10",
-                "name": "SmartCityChain",
-                "description": "Aims at making cities inclusive, safe, resilient, and sustainable by funding smart city solutions that leverage blockchain for urban planning, governance, and community engagement.",
-                "sdg": "Sustainable Cities and Communities",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA15",
-                "teamSize": "6",
-                "image": "https://i.imgur.com/LTooNKM.png"
-            },
-            {
-                "id": "11",
-                "name": "EcoChain",
-                "description": "Promotes sustainable consumption and production patterns through a decentralized platform that tracks the environmental impact of products and encourages eco-friendly practices.",
-                "sdg": "Responsible Consumption and Production",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA16",
-                "teamSize": "10",
-                "image": "https://i.imgur.com/UpKBi2S.png"
-            },
-            {
-                "id": "12",
-                "name": "Climate Ledger",
-                "description": "A project dedicated to combating climate change by funding initiatives that use blockchain to track carbon emissions, facilitate carbon trading, and support climate action projects.",
-                "sdg": "Climate Action",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA17",
-                "teamSize": "12",
-                "image": "https://i.imgur.com/7bv6Kd3.png"
-            },
-            {
-                "id": "13",
-                "name": "OceanArchive",
-                "description": "Utilizes blockchain to conserve and sustainably use the oceans, seas, and marine resources by supporting research, conservation projects, and sustainable fisheries.",
-                "sdg": "Life Below Water",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA18",
-                "teamSize": "4",
-                "image": "https://i.imgur.com/8BDa04F.png"
-            },
-            {
-                "id": "14",
-                "name": "GreenLedger",
-                "description": "Protects, restores, and promotes sustainable use of terrestrial ecosystems by funding reforestation, biodiversity conservation projects, and anti-desertification initiatives.",
-                "sdg": "Life on Land",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA19",
-                "teamSize": "4",
-                "image": "https://i.imgur.com/cIzVOBw.png"
-            },
-            {
-                "id": "15",
-                "name": "JusticeChain",
-                "description": "Enhances peace, justice, and strong institutions by supporting projects that use blockchain for transparency in governance, fighting corruption, and ensuring access to justice.",
-                "sdg": "Peace, Justice and Strong Institutions",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA19",
-                "teamSize": "4",
-                "image": "https://i.imgur.com/8e6hoA5.png"
-            },
-            {
-                "id": "16",
-                "name": "SDG Connect",
-                "description": "A platform that strengthens global partnerships for sustainable development by facilitating collaboration between projects, funders, and communities working towards the SDGs, leveraging blockchain for efficient and transparent cooperation.",
-                "sdg": "Partnerships for the Goals",
-                "walletAddress": "0x79e23EaCd27b1706D8C0Ce5dF45904177Fa64bA19",
-                "teamSize": "4",
-                "image": "https://i.imgur.com/kEZrLaE.png"
+              "id": "107",
+              "name": "",
+              "description": "",
+              "sdg": "",
+              "walletAddress": "",
+              "teamSize": "",
+              "image": ""
             }
-        ]
-    }
-];
+          ]
+      }
+  ]
