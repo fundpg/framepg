@@ -9,7 +9,6 @@ export default function Round({ round }: { round: Round}){
         <Card key={round.id} className="flex flex-col justify-between">
             <CardHeader>{round.roundMetadata.name}</CardHeader>
             <CardFooter className="flex flex-col gap-1 items-start pb-3">
-              <CardDescription>{round.applications.length} applications</CardDescription>
               <div className="flex flex-row gap-2 items-center">
                 <FaArrowUpRightFromSquare size={12} />
                 <Link href={`https://warpcast.com/~/compose?text=Donate to projects in GG25 round ${round.roundMetadata.name}! &embeds[]=https://framepg.xyz/api?round=${round.id}`} className="text-sm">

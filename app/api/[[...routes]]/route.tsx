@@ -11,78 +11,47 @@ import { serveStatic } from 'frog/serve-static'
 const app = new Frog({
   assetsPath: '/',
   basePath: '/api',
+  initialState: {
+    projectId: 0
+  }
 })
-
-
-// Uncomment to use Edge Runtime
-// export const runtime = 'edge'
 
 app.frame('/', async(c) => {
-  const { buttonValue, inputText, status } = c
-  //const fruit = inputText || buttonValue
-  const amount = inputText || buttonValue
-  const data = await fetchRound('26', 42161) as unknown as any;
-  const applications = (data?.rounds as unknown as any)[0]?.applications;
-  console.log(data);
+  const { buttonValue, status, deriveState } = c
+  const url = new URL(c.req.url);
+  const id = url.searchParams.get("id");
+  const round = await fetchRound(`${id}`, 42161)
+
+  const state: any = deriveState((previousState: any) => {
+    if (buttonValue === 'reset') previousState.count = 0
+    if(buttonValue === "inc") previousState.count++
+    if (buttonValue === 'dec') previousState.count--
+  })
+
   return c.res({
     image: (
-      <div
-        style={{
-          alignItems: 'center',
-          background:
-            status === 'response'
-              ? 'linear-gradient(to right, #432889, #17101F)'
-              : 'black',
-          backgroundSize: '100% 100%',
-          display: 'flex',
-          flexDirection: 'column',
-          flexWrap: 'nowrap',
-          height: '100%',
-          justifyContent: 'center',
-          textAlign: 'center',
-          width: '100%',
-        }}
-      >
-        <div
-          style={{
-            color: 'white',
-            fontSize: 60,
-            fontStyle: 'normal',
-            letterSpacing: '-0.025em',
-            lineHeight: 1.4,
-            marginTop: 30,
-            padding: '0 120px',
-            whiteSpace: 'pre-wrap',
-          }}
-        >
-          {/* {status === 'response'
-            ? `Nice choice.${fruit ? ` ${fruit.toUpperCase()}!!` : ''}`
-            : 'Welcome!'} */}
-          {status === 'response'
-            ? `Donate:${amount ? ` ${amount.toUpperCase()}!!` : ''}`
-            : 'Nice!'}
-        </div>
+      <div style={{ color: 'white', display: 'flex', flexDirection: "column", gap: 2, paddingLeft: '5%', fontSize: 60 }}>
+        <p>
+          GG20 | Round ID {id}
+        </p>
+        <p>
+          {state.id.length === 0 ? round.data?.rounds[0].roundMetadata.name : 
+          round.data?.rounds[0].applications[state.id].metadata.project.title}
+        </p>
       </div>
     ),
-    intents: [
-      <TextInput placeholder="Enter donation amount" />,
-      <Button.Transaction target="/allocate"> Donate </Button.Transaction>,
-      //status === 'response' && <Button.Reset>Reset</Button.Reset>,
-      //status === 'response' && <Button.Transaction target="/mint"> Donate </Button.Transaction>,
-    ],
+    intents: state.id.length === 0 ? [
+      <Button.Redirect location={`https://explorer.gitcoin.co/#/round/42161/${id}`}>View Round</Button.Redirect>,
+       <Button value="inc">Explore Projects</Button>,
+    ] : state.id.length > 0 ? [
+      <Button.Redirect location={`https://explorer.gitcoin.co/#/round/42161/${id}/${state.id}`}>View Project</Button.Redirect>,
+      <Button value="inc">Next</Button>,
+      <Button value="dec">Back</Button>
+    ] : [
+      <Button value="inc">Next</Button>,
+      <Button value="dec">Back</Button>
+    ]
   })
-})
-
-app.transaction('/allocate', (c) => {
-
-  // return c.contract({
-  //   to: mrcAddress,
-  //   abi: MRC_ABI,
-  //   functionName: 'allocate',
-  //   chainId: `eip155:${chainId}`,
-  //   args: [ BigInt(roundId), BigInt(inputText || ''), data],
-  //   value: parseEther(inputText || '')
-  // })
 })
 
 

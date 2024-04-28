@@ -23,7 +23,7 @@ export function Header() {
                     <CardTitle>FramePG</CardTitle>
                 </div>
                 <CardDescription>
-                    View and donate to Gitcoin gg20 grant rounds inside of Farcaster frames
+                    View and donate to Gitcoin GG20 grant rounds inside of Farcaster frames
                     <br/>
                     <span className="font-medium">How it works:</span>
                     <br/> - Choose a GG20 round below and share its link on Warpcast as a frame
