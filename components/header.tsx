@@ -23,15 +23,15 @@ export function Header() {
                     <CardTitle>FramePG</CardTitle>
                 </div>
                 <CardDescription>
-                    View and donate to Gitcoin grant rounds inside of Farcaster frames
+                    View and donate to Gitcoin GG20 grant rounds inside of Farcaster frames
                     <br/>
                     <span className="font-medium">How it works:</span>
-                    <br/> - Choose a round below and share its link on Warpcast as a frame
-                    <br /> - Others can view/donate to projects from that round in the frame
+                    <br/> - Choose a GG20 round below and share its link on Warpcast as a frame
+                    <br /> - When you or someone else clicks on the frame, you'll be able to view and donate to projects from that round
                 </CardDescription>
                 <div className="flex flex-row justify-between items-center">
                     <CardDescription className="text-sm pt-3">
-                            Powered by <Link href="https://base.org" className="underline">Base</Link> and <Link href="https://frog.fm" className="underline">Frog</Link>
+                            Powered by <Link href="https://frog.fm" className="underline">Frog</Link>
                     </CardDescription>
                     <Link href="https://github.com/fundpg/framepg" className="underline">
                         <FaGithub size={16} className="pt-1" />

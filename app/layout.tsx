@@ -12,7 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const frameMetadata = await getFrameMetadata(`${url}/api`)
   return {
     title: 'FramePG',
-    description: 'View and donate to Gitcoin grant rounds inside of Farcaster frames',
+    description: 'View and donate to Gitcoin GG20 grant rounds inside of Farcaster frames',
     metadataBase: new URL("https://framepg.xyz"),
     openGraph: {images:[FPG_BANNER_URL]},
     other: frameMetadata,

@@ -1,8 +1,12 @@
 ## FramePG 
 
-![FramePG banner](https://i.imgur.com/Ag60nbm.png)
+![FramePG banner](https://i.imgur.com/HKwAaIU.png)
 
-View and donate to Gitcoin grant rounds inside of Farcaster frames
+View and donate to Gitcoin GG20 grant rounds inside of Farcaster frames
+
+Built by [dylsteck](https://github.com/dylsteck/framepg)
+
+
 
 ```
 npm install
