@@ -2,7 +2,7 @@ import { type GitcoinRound } from "@/lib/types";
 import { Card, CardDescription, CardFooter, CardHeader } from "../ui/card";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import Link from "next/link";
-import { Round } from "@/hooks/useRounds";
+import { type Round } from "@/hooks/useRounds";
 
 export default function Round({ round }: { round: Round}){
     return(
