@@ -11,7 +11,7 @@ export default function Round({ round }: { round: Round}){
             <CardFooter className="flex flex-col gap-1 items-start pb-3">
               <div className="flex flex-row gap-2 items-center">
                 <FaArrowUpRightFromSquare size={12} />
-                <Link href={`https://warpcast.com/~/compose?text=Donate to projects in GG25 round ${round.roundMetadata.name}! &embeds[]=https://framepg.xyz/api?round=${round.id}`} className="text-sm">
+                <Link href={`https://warpcast.com/~/compose?text=Donate to projects in GG25 round ${round.roundMetadata.name}! &embeds[]=https://framepg.xyz/api?id=${round.id}`} className="text-sm">
                   Share Frame
                 </Link>
               </div>
